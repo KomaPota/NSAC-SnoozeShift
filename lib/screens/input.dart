@@ -39,6 +39,24 @@ class _InputScreenState extends State<InputScreen> {
     );
   }
 
+  Widget Picker(String label){
+    return Container(
+      margin: EdgeInsets.only(top: 50, left: 20, right: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("$label\n",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w100,
+            ),
+          ),
+
+        ],
+      ),
+    );
+  }
+
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
