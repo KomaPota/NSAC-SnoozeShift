@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "597009838560",
+    "firebase_url": "https://snoozeshift.firebaseio.com",
+    "project_id": "snoozeshift",
+    "storage_bucket": "snoozeshift.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597009838560:android:ba58eb1b89a6494e46bb85",
+        "android_client_info": {
+          "package_name": "com.snoozeshifters.snoozeshift"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597009838560-s2jq8t156u75a867ub8gmnen0ifi74pb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snoozeshifters.snoozeshift",
+            "certificate_hash": "b839a7ff67b85f4571b84865c82eb22fab591354"
+          }
+        },
+        {
+          "client_id": "597009838560-b250ngredskqj9o7gvtqog7f5sm1ojkp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpO8WWglZn5uPvqAbeWwmvp4hL3ZYisZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597009838560-b250ngredskqj9o7gvtqog7f5sm1ojkp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
