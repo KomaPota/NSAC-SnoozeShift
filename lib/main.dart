@@ -1,7 +1,9 @@
 import 'dart:math';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:snoozeshift/screens/input.dart';
 import 'package:snoozeshift/screens/loginpage.dart';
 
 void main() {
@@ -89,14 +91,38 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(topRight: Radius.circular(50.0), topLeft: Radius.circular(50.0)),
-                color: Color(0xff858585),
+                color: Color(0xaa656565),
+//                border: Border.all(color: Theme.of(context).accentColor),
               ),
               child: new Wrap(
                 children: <Widget>[
                   new ListTile(
+                    title: Container(
+                      margin: EdgeInsets.only(top: 10),
+                      child: Text("Choose your Case",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                          color: Theme.of(context).accentColor,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    thickness: 3,
+                    color: Theme.of(context).accentColor,
+                    indent: MediaQuery.of(context).size.width*0.45,
+                    endIndent: MediaQuery.of(context).size.width*0.45,
+                  ),
+                  new ListTile(
                       leading: new Icon(Icons.star),
                       title: new Text('Spaceflight'),
-                      onTap: () => {}
+                      onTap: () => {
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(builder: (context)=>InputScreen()),
+                      )}
                   ),
                   new ListTile(
                     leading: new Icon(Icons.flight),
@@ -129,13 +155,26 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
+
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: Icon(Icons.menu,
+          size: 35,
+          color: Color(0xffffffff),
+        ),
+      ),
+
+      drawer: Drawer(
+
+      ),
+
       body: Center(
         child: ListView(
           children: <Widget>[
             Container(
-              margin: EdgeInsets.only(top: 50, left: 20),
+              margin: EdgeInsets.only(top: 20, left: 20),
               child: Text(
-                '$element John,',
+                '$element Sara,',
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
                   fontSize: 34,
