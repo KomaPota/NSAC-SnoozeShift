@@ -80,13 +80,52 @@ class _MyHomePageState extends State<MyHomePage> {
     "Hola!",
   ];
 
+  void _optionsModalBottomSheet(context){
+    showModalBottomSheet(
+        context: context,
+        builder: (BuildContext bc){
+          return Container(
+            color: Colors.black,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(topRight: Radius.circular(50.0), topLeft: Radius.circular(50.0)),
+                color: Color(0xff858585),
+              ),
+              child: new Wrap(
+                children: <Widget>[
+                  new ListTile(
+                      leading: new Icon(Icons.star),
+                      title: new Text('Spaceflight'),
+                      onTap: () => {}
+                  ),
+                  new ListTile(
+                    leading: new Icon(Icons.flight),
+                    title: new Text('Air Travel'),
+                    onTap: () => {},
+                  ),
+                  new ListTile(
+                    leading: new Icon(Icons.alarm),
+                    title: new Text('Shift Work'),
+                    onTap: () => {},
+                  ),
+                  new ListTile(
+                    leading: new Icon(Icons.mood_bad),
+                    title: new Text('Sleep Correction'),
+                    onTap: () => {},
+                  ),
+                ],
+              ),
+            ),
+          );
+        }
+    );
+  }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context1) {
 
     final _random = new Random();
     var element = greetings[_random.nextInt(greetings.length)];
-
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
@@ -119,6 +158,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
+        onPressed: (){
+            _optionsModalBottomSheet(context);
+          },
       )
     );
   }
